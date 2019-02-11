@@ -1,6 +1,6 @@
 {
   "id": "com.plugwise.adam",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=2.0.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
@@ -29,6 +29,7 @@
       }
     ]
   },
+  "homeyCommunityTopicId": 8828,
   "flow": {
     "actions": [
       {
