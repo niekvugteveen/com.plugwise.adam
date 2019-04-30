@@ -207,7 +207,8 @@
       "class": "thermostat",
       "capabilities": [
         "target_temperature",
-        "measure_temperature"
+        "measure_temperature",
+        "location_preset"
       ],
       "capabilitiesOptions": {
         "target_temperature": {
