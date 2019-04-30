@@ -1,14 +1,14 @@
 {
   "id": "com.plugwise.adam",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "compatibility": ">=2.0.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
   "name": {
-    "en": "Plugwise Adam"
+    "en": "Plugwise"
   },
   "description": {
-    "en": "Adds support for Plugwise Adam"
+    "en": "Adds support for Plugwise devices"
   },
   "category": [
     "climate"

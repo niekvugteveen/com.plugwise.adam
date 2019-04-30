@@ -1,14 +1,14 @@
 {
   "id": "com.plugwise.adam",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "compatibility": ">=2.0.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
   "name": {
-    "en": "Plugwise Adam"
+    "en": "Plugwise"
   },
   "description": {
-    "en": "Adds support for Plugwise Adam"
+    "en": "Adds support for Plugwise devices"
   },
   "category": [
     "climate"
@@ -156,22 +156,69 @@
       "id": "adam"
     },
     {
+      "images": {
+        "large": "/drivers/anna/assets/images/large.png",
+        "small": "/drivers/anna/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "loading"
+          }
+        },
+        {
+          "id": "loading",
+          "template": "loading"
+        },
+        {
+          "id": "pincode",
+          "template": "pincode",
+          "options": {
+            "type": "text",
+            "length": 8,
+            "title": {
+              "en": "Enter password"
+            },
+            "hint": {
+              "en": "Enter the password. You can find this on the back of the device."
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
       "name": {
-        "en": "Lisa"
+        "en": "Anna"
       },
       "class": "thermostat",
       "capabilities": [
         "target_temperature",
-        "measure_temperature",
-        "measure_battery"
+        "measure_temperature"
       ],
       "capabilitiesOptions": {
         "target_temperature": {
-          "min": 0,
-          "max": 99.5,
+          "min": 4,
+          "max": 30,
           "step": 0.5
         }
       },
+      "id": "anna"
+    },
+    {
       "images": {
         "large": "/drivers/lisa/assets/images/large.png",
         "small": "/drivers/lisa/assets/images/small.png"
@@ -201,7 +248,7 @@
               "en": "Enter password"
             },
             "hint": {
-              "en": "Enter the Adam's password. You can find this on the back of the device."
+              "en": "Enter the password. You can find this on the back of the device."
             }
           }
         },
@@ -217,18 +264,25 @@
           "template": "add_devices"
         }
       ],
+      "name": {
+        "en": "Lisa"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature",
+        "measure_battery"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 0,
+          "max": 99.5,
+          "step": 0.5
+        }
+      },
       "id": "lisa"
     },
     {
-      "name": {
-        "en": "Plug"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff",
-        "measure_power",
-        "meter_power"
-      ],
       "images": {
         "large": "/drivers/plug/assets/images/large.png",
         "small": "/drivers/plug/assets/images/small.png"
@@ -258,7 +312,7 @@
               "en": "Enter password"
             },
             "hint": {
-              "en": "Enter the Adam's password. You can find this on the back of the device."
+              "en": "Enter the password. You can find this on the back of the device."
             }
           }
         },
@@ -274,26 +328,18 @@
           "template": "add_devices"
         }
       ],
+      "name": {
+        "en": "Plug"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff",
+        "measure_power",
+        "meter_power"
+      ],
       "id": "plug"
     },
     {
-      "name": {
-        "en": "Floor & Tom"
-      },
-      "class": "thermostat",
-      "capabilities": [
-        "target_temperature",
-        "measure_temperature",
-        "valve_position",
-        "measure_battery"
-      ],
-      "capabilitiesOptions": {
-        "target_temperature": {
-          "min": 0,
-          "max": 99.5,
-          "step": 0.5
-        }
-      },
       "images": {
         "large": "/drivers/valve/assets/images/large.png",
         "small": "/drivers/valve/assets/images/small.png"
@@ -323,7 +369,7 @@
               "en": "Enter password"
             },
             "hint": {
-              "en": "Enter the Adam's password. You can find this on the back of the device."
+              "en": "Enter the password. You can find this on the back of the device."
             }
           }
         },
@@ -339,19 +385,15 @@
           "template": "add_devices"
         }
       ],
-      "id": "valve"
-    },
-    {
       "name": {
-        "en": "Zone",
-        "nl": "Zone"
+        "en": "Floor & Tom"
       },
       "class": "thermostat",
       "capabilities": [
         "target_temperature",
         "measure_temperature",
-        "measure_power",
-        "location_preset"
+        "valve_position",
+        "measure_battery"
       ],
       "capabilitiesOptions": {
         "target_temperature": {
@@ -360,6 +402,9 @@
           "step": 0.5
         }
       },
+      "id": "valve"
+    },
+    {
       "images": {
         "large": "/drivers/zone/assets/images/large.png",
         "small": "/drivers/zone/assets/images/small.png"
@@ -389,7 +434,7 @@
               "en": "Enter password"
             },
             "hint": {
-              "en": "Enter the Adam's password. You can find this on the back of the device."
+              "en": "Enter the password. You can find this on the back of the device."
             }
           }
         },
@@ -405,6 +450,24 @@
           "template": "add_devices"
         }
       ],
+      "name": {
+        "en": "Adam Zone",
+        "nl": "Adam Zone"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature",
+        "measure_power",
+        "location_preset"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature": {
+          "min": 0,
+          "max": 99.5,
+          "step": 0.5
+        }
+      },
       "id": "zone"
     }
   ],
