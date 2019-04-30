@@ -16,9 +16,8 @@ module.exports = class PlugwiseAnnaDevice extends PlugwiseThermostatDevice {
   }
 
   async onCapabilityLocationPreset( value ) {
-    this.log('onCapabilityLocationPreset', value);
     const { applianceId } = this;
-    
+        
     return this.bridge.setPreset({
       applianceId,
       preset: value,
