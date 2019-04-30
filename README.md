@@ -1,9 +1,10 @@
 # Plugwise
 
-This app adds support for Plugwise devices. This app supports:
+This app adds support for Plugwise devices.
 
 * Anna
 * Adam
+	* Anna
 	* Lisa
 	* Floor
 	* Tom
