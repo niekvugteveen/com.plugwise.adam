@@ -1,0 +1,14 @@
+{
+  "$extends": "plugwise",
+  "name": {
+    "en": "Smile P1 (V3)"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_power",
+    "meter_power"
+  ],
+  "energy": {
+    "cumulative": true
+  }
+}

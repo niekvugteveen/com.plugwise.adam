@@ -1,6 +1,6 @@
 {
   "id": "com.plugwise.adam",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "compatibility": ">=2.5.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
@@ -281,6 +281,14 @@
           "step": 0.5
         }
       },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      },
       "id": "lisa"
     },
     {
@@ -339,6 +347,65 @@
         "meter_power"
       ],
       "id": "plug"
+    },
+    {
+      "images": {
+        "large": "/drivers/smile-p1/assets/images/large.png",
+        "small": "/drivers/smile-p1/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "loading"
+          }
+        },
+        {
+          "id": "loading",
+          "template": "loading"
+        },
+        {
+          "id": "pincode",
+          "template": "pincode",
+          "options": {
+            "type": "text",
+            "length": 8,
+            "title": {
+              "en": "Enter password"
+            },
+            "hint": {
+              "en": "Enter the password. You can find this on the back of the device."
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "Smile P1 (V3)"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_power",
+        "meter_power"
+      ],
+      "energy": {
+        "cumulative": true
+      },
+      "id": "smile-p1"
     },
     {
       "images": {
@@ -402,6 +469,12 @@
           "max": 99.5,
           "step": 0.5
         }
+      },
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
       },
       "id": "valve"
     },
